@@ -1,0 +1,128 @@
+/* Main */
+* {
+    box-sizing: border-box;
+}
+:root{
+    --c-1: 25, 25, 58; /* azul oscuro*/
+    --c-2: 239,244,254; /* blanco azulado*/
+    --nav-size: 75px; /* altura de la barra de navegación */
+    --shadow-1: 9px 9px 18px rgba(0, 0, 0, 0.25); /* sombra suave */
+    --shadow-2: 6px 6px 12px rgba(0, 0, 0, 0.5); /* sombra más intensa */
+}
+body {
+    font-family: lato, times, arial;
+    color: rgb(var(--c-1));
+    margin: 0;
+}
+
+/* Hero section */
+.hero__section {   
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background: url("Imagenes/fondo-encabezado.jpg") no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+.hero__logo {
+    width: clamp(100px, 25vw, 600px);
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: var(--shadow-1);
+    margin-top: calc(var(--nav-size)/2);
+}
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: var(--nav-size);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(var(--c-2),0.2);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-shadow: var(--shadow-2);
+    z-index: 2;
+}
+.navbar.notransparent {
+    background-color: rgba(var(--c-2), 0.8);
+}
+.navbar__logo {
+    width: auto;
+    height: 75%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.navbar__brand {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(var(--c-1));
+    text-decoration: none;
+}
+.navbar__list {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.navbar__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.navbar__link {
+    color: rgb(var(--c-1));
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+.navbar__link:hover {
+    font-weight: bold;
+}
+.navbar__services-list {
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    margin-top: 10px;
+    padding: 25px 10px;
+    width: 250px;
+    border-radius: 8px;
+    background-color: rgba(var(--c-2),0.2);
+    box-shadow: var(--shadow-2);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: none;
+    align-items: center;
+    opacity: 0;
+}
+.navbar__services-list.transparent {
+    background-color: rgba(var(--c-2),0.2);
+}
+.navbar__services-list.notransparent {
+    background-color: rgba(var(--c-2), 0.8);
+}
+.navbar__services-list.show {
+    opacity: 1;
+    transform: translate(-50%, 200%);
+}
+.navbar__services-item {
+    font-size: large;
+    width: 100%;
+    text-align: center;
+}
