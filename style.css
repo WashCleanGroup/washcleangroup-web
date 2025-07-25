@@ -22,7 +22,7 @@ body {
     margin: 0;
     top: 0;
     left: 0;
-    background: url("Imagenes/fondo-encabezado.jpg") no-repeat center center;
+    background: url("https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg") no-repeat center center;
     background-size: cover;
     z-index: 0;
 }
