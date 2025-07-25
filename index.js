@@ -13,7 +13,7 @@ document.addEventListener("click", function(e) {
 document.addEventListener("scroll", function(e) {
     const navbar = document.getElementById("navbar");
     const menu = document.getElementById("services-list");
-    if (window.scrollY > 200) {
+    if (window.scrollY > 150) {
         navbar.classList.add("notransparent");
         menu.classList.add("notransparent");
     } else {
