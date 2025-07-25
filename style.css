@@ -133,6 +133,9 @@ body {
     .navbar__brand {
         display: none;
     }
+    .hero__logo {
+        width: clamp(100px, 50vw, 600px);
+    }
 }
 @media(max-width: 400px) {
     .navbar {
