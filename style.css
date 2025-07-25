@@ -218,7 +218,6 @@ body {
         gap: 20px;
         padding: calc(var(--nav-size) + 20px) 5vw 20px 5vw;
         text-align: center;
-        height: auto;
     }
 
     .hero__logo1 {
