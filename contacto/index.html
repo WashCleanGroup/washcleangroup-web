@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WashClean Group</title>
+    <link rel="icon" href="../Imagenes/logo-txt.png" type="image/png">
+
+    <!--Conexión css y js-->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!--Encabezado de la pagina-->
+        <section class="hero__section">
+            <div class="welcome__section">
+                <h2 class="section__title">Contactanos por nuestras redes sociales</h2>
+                <p class="section__description">Con mucho gusto ponemos a tu disposición nuestras redes sociales, donde podrás conocer nuestros servicios, contactarnos, resolver tus dudas y mucho más. Para cotizaciones, te recomendamos preferentemente contactarnos a través de nuestro WhatsApp.</p>
+                <a href="https://wa.me/56944416878" target="_blank" style="max-width: 150px;"><img src="https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg" alt="WhatsApp"></a>
+                <a href="https://www.instagram.com/washcleangroup" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram"></a>
+                <a href="https://www.washcleangroup.cl/facebook" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/250px-2021_Facebook_icon.svg.png" alt="Facebook"></a>
+            </div>
+            <div class="welcome__section">
+                <h2>Formulario</h2>
+                <p>¿No pudiste contactarnos por redes sociales? No te preocupes, también puedes escribirnos completando el siguiente formulario:</p>
+                <br>
+                <form id="formulario" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="886c29c4-de0c-46b0-b95f-62dba3c3043a">
+    
+                    <input name="Nombre" id="name" type="text" placeholder="Nombre">
+                    <input name="Correo" id="email" type="email" placeholder="Correo electronico">
+                    <textarea name="Mensaje" id="mensaje" placeholder="Tu mensaje..."></textarea>
+    
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
+                    <button id="button" type="submit">Enviar</button>
+    
+                    <p id="campos_incompletos" style="font-weight: bold; color: red; font-size: medium; text-align: center; display: none;">** Completa todos los campos **</p>
+                    <p id="msj_exito" style="font-weight: bold; color: green; font-size: medium; text-align: center; display: none;">¡Mensaje enviado!</p>
+                </form>
+            </div>
+        </section>
+        <!-- Barra de navegación -->
+        <nav class="navbar" id="navbar">
+            <img src="../Imagenes/logo.png" alt="Logo WashClean Group" class="navbar__logo">
+            <h1 class="navbar__brand">WashClean Group</h1>
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="../" class="navbar__link">Inicio</a></li>
+                <li class="navbar__item">
+                    <a class="navbar__link" id="services-toggle" onclick="serviceslist()">Servicios▾</a>
+                    <ul class="navbar__services-list" id="services-list">
+                        <li class="navbar__item"><a href="../servicios/deteccion-de-fugas" class="navbar__link">Detección de fugas</a></li>
+                        <li class="navbar__item"><a href="../servicios/aseo-y-limpieza" class="navbar__link">Aseo y limpieza</a></li>
+                    </ul>
+                </li>
+                <li class="navbar__item"><a href="../contacto" class="navbar__link">Contacto</a></li>
+            </ul>
+    </header>
+</body>
+</html>

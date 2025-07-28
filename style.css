@@ -21,8 +21,10 @@ body {
 .hero__section {
   width: 100%;
   height: 100vh;
-  background: url("https://images.pexels.com/photos/2214035/pexels-photo-2214035.jpeg") no-repeat center center;
-  background-size: cover;
+  background: 
+    url("../Imagenes/fondo-encabezado.jpg") no-repeat center center, 
+    url("../Imagenes/fondo-encabezado-antiguo-de-respaldo.jpg") no-repeat center center;
+  background-size: cover, cover;
   z-index: 0;
   display: flex;
   flex-direction: row;
@@ -32,15 +34,11 @@ body {
   flex-wrap: nowrap;
 }
 
-.hero__logo, .hero__logo1 {
+.hero__logo {
  width: clamp(100px, 25vw, 600px);
  height: auto;
  box-shadow: var(--shadow-1);
  margin-top: calc(var(--nav-size) / 2);
-}
-
-.hero__logo1 {
-    display: none;
 }
 
 .welcome__section {
@@ -220,16 +218,12 @@ body {
         text-align: center;
     }
 
-    .hero__logo1 {
+    .hero__logo {
         display: block;
         width: clamp(120px, 50vw, 300px);
         height: auto;
         margin-top: 10px;
         box-shadow: var(--shadow-1);
-    }
-
-    .hero__logo {
-        display: none;
     }
     
     .welcome__section {
