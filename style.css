@@ -22,8 +22,8 @@ body {
   width: 100%;
   height: 100vh;
   background: 
-    url("/Imagenes/fondo-encabezado.jpg") no-repeat center center, 
-    url("/Imagenes/fondo-encabezado-antiguo-de-respaldo.jpg") no-repeat center center;
+    url("Imagenes/fondo-encabezado.jpg") no-repeat center center, 
+    url("Imagenes/fondo-encabezado-antiguo-de-respaldo.jpg") no-repeat center center;
   background-size: cover, cover;
   z-index: 0;
   display: flex;
