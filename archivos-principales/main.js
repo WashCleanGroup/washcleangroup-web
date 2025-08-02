@@ -1,4 +1,9 @@
-// header
+// navbar
+fetch("../archivos-principales/navbar.html")
+.then(res => res.text())
+.then(data => {
+    document.getElementById("navbar-container").innerHTML = data;
+});
 function serviceslist() {
     const menu = document.getElementById("services-list");
     menu.classList.toggle("show");
@@ -21,3 +26,11 @@ document.addEventListener("scroll", function(e) {
         menu.classList.remove("notransparent");
     }
 });
+// footer
+fetch("../archivos-principales/footer.html")
+.then(res => res.text())
+.then(data => {
+    document.getElementById("footer-container").innerHTML = data;
+});
+
+

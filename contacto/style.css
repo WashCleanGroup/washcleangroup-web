@@ -1,29 +1,7 @@
-/* Main */
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --c-1: 25, 25, 58; /* azul oscuro */
-  --c-2: 239, 244, 254; /* blanco azulado */
-  --nav-size: 75px;
-  --shadow-1: 9px 9px 18px rgba(0, 0, 0, 0.25);
-  --shadow-2: 6px 6px 12px rgba(0, 0, 0, 0.5);
-}
-
-body {
-  font-family: lato, times, arial;
-  color: rgb(var(--c-1));
-  margin: 0;
-}
-
-/* Hero section */
 .hero__section {
   width: 100%;
   height: 100vh;
-  background: 
-    url("../Imagenes/fondo-encabezado.jpg") no-repeat center center, 
-    url("../Imagenes/fondo-encabezado-antiguo-de-respaldo.jpg") no-repeat center center;
+  background: url("../imagenes/fondo-encabezado.jpg") no-repeat center center;
   background-size: cover, cover;
   z-index: 0;
   display: flex;
@@ -34,136 +12,27 @@ body {
   flex-wrap: nowrap;
 }
 
-.hero__logo {
- width: clamp(100px, 25vw, 600px);
- height: auto;
- box-shadow: var(--shadow-1);
- margin-top: calc(var(--nav-size) / 2);
-}
-
-.welcome__section {
+/* Contact section */
+.contact__section {
   width: clamp(100px, 35vw, 600px);
   padding: 20px 20px;
   margin-top: calc(var(--nav-size) / 2);
   text-align: center;
-  background-color: rgba(var(--c-2), 0.75);
+  background-color: rgba(var(--c-2), 0.9);
   border-radius: 10px;
 }
 
-.welcome__section h2 {
+.contact__section h2 {
   font-size: 2rem;
 }
 
-.welcome__section p {
+.contact__section p {
   font-size: 1.2rem;
   text-align: justify;
   margin-top: 10px;
 }
 
-
-/* Navbar */
-.navbar {
-  width: 100%;
-  height: var(--nav-size);
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(var(--c-2), 0.75);
-  color: rgb(var(--c-1));
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  box-shadow: var(--shadow-2);
-  z-index: 2;
-  transition: background-color 1s ease, text-shadow 1s ease;
-  text-shadow: 2px 2px 4px rgba(var(--c-2), 1);
-}
-
-.navbar.notransparent {
-  background-color: rgba(var(--c-2), 1);
-  text-shadow: none;
-}
-
-.navbar__logo {
-  height: 75%;
-  margin: 0 20px;
-}
-
-.navbar__brand {
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.navbar__list {
-  display: flex;
-  list-style: none;
-  margin-left: auto;
-  margin-right: 20px;
-  padding: 0;
-}
-
-.navbar__item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 0 15px;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-.navbar__link {
-  text-decoration: none;
-  color: inherit;
-  font-size: inherit;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-
-.navbar__link:hover {
-  font-weight: bold;
-}
-
-.navbar__services-list {
-  position: absolute;
-  top: 200%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 10px;
-  padding: 25px 10px;
-  width: 250px;
-  border-radius: 8px;
-  background-color: rgba(var(--c-2), 0.8);
-  box-shadow: var(--shadow-2);
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  list-style: none;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 1s ease, transform 0.5s ease, background-color 1s ease;
-  pointer-events: none;
-}
-
-.navbar__services-list.notransparent {
-  background-color: rgba(var(--c-2), 1);
-}
-
-.navbar__services-list.show {
-  opacity: 1;
-  transform: translate(-50%, 0);
-  pointer-events: all;
-}
-
-.navbar__services-item {
-  font-size: large;
-  width: 100%;
-  text-align: center;
-}
-
-.welcome__section a {
+.contact__section a {
   display: inline-flex;
   width: 35%;
   max-width: 45px;
@@ -178,16 +47,17 @@ body {
   transition: box-shadow 0.5s, background-color 0.25s;
 }
 
-.welcome__section a:hover {
+.contact__section a:hover {
   box-shadow: none;
   background-color: rgb(var(--c-1));
 }
-.welcome__section img {
+
+.contact__section img {
   height: 100%;
   width: 100%;
 }
 
-.welcome__section input, textarea {
+.contact__section input, textarea {
   border-radius: 8px;
   width: 90%;
   max-width: 400px;
@@ -199,35 +69,37 @@ body {
   transition: box-shadow 0.5s;
   color: rgb(var(--c-1));
 }
-.welcome__section textarea {
+
+.contact__section textarea {
   resize: none;
   height: 100px;
 }
-.welcome__section input:hover, textarea:hover {
+
+.contact__section input:hover, textarea:hover {
   box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
 }
-.welcome__section button {
+
+.contact__section button {
   border-radius: 8px;
   width: 90%;
   max-width: 400px;
   padding: 10px;
   margin: 10px auto;
   box-shadow: 6px 6px 6px rgba(0,0,0,0.25);
-  transition: box-shadow 0.5s;
-  color: white;
-  background-color: #041d38;
+  transition: box-shadow 0.25s, background-color 0.25s, color 0.25s;
+  color: rgb(var(--c-2));
+  background-color: rgb(var(--c-1));
   border-width: 0px;
 }
-.welcome__section button:hover {
-  box-shadow: none;
+
+.contact__section button:hover {
+  box-shadow: 1.5px 1.5px 6px rgba(0,0,0,0.25);
+  background-color: rgb(var(--c-2));
+  color: rgb(var(--c-1));
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .navbar__brand {
-        display: none;
-    }
-
     .hero__section {
         height: 100%;
         flex-direction: column;
@@ -246,32 +118,16 @@ body {
         box-shadow: var(--shadow-1);
     }
     
-    .welcome__section {
+    .contact__section {
         width: 90%;
         padding: 15px 20px;
         margin: 0;
     }
 
-    .navbar__list {
-        margin-right: auto;
-        font-weight: 700;
-        justify-content: center;
-    }
-
-    .welcome__section {
+    .contact__section {
         padding: 5px 5vw;
     }
     .description__section {
         padding: 5px 5vw;
     }
-}
-
-@media (max-width: 400px) {
-  .navbar {
-    justify-content: baseline;
-  }
-
-  .navbar__logo {
-    display: none;
-  }
 }
