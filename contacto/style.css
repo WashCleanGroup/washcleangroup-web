@@ -10,6 +10,8 @@
   justify-content: center;
   gap: 10vw;
   flex-wrap: nowrap;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
 
 /* Contact section */
@@ -43,7 +45,7 @@
   box-shadow: var(--shadow-2);
   justify-content: center;
   align-items: center;
-  margin: auto 5px;
+  margin: 5px 5px 20px;
   transition: box-shadow 0.5s, background-color 0.25s;
 }
 
@@ -99,6 +101,12 @@
 }
 
 /* Responsive */
+@media (max-height: 600px) {
+  .hero__section {
+    height: auto;
+    padding-top: 50px;
+  }
+}
 @media (max-width: 768px) {
     .hero__section {
         height: 100%;

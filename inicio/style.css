@@ -11,6 +11,8 @@
   justify-content: center;
   gap: 10vw;
   flex-wrap: nowrap;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
 .hero__logo {
   width: clamp(100px, 25vw, 600px);
