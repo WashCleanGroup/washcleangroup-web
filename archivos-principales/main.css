@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 :root {
-  --c-1: 25, 25, 58; /* azul oscuro */
-  --c-2: 239, 244, 254; /* blanco azulado */
-  --c-3: 176, 155, 109; /* dorado */
+  --c-1: 25, 25, 45; /* azul oscuro */
+  --c-2: 240, 244, 254; /* blanco azulado */
+  --c-3: 176, 155, 108; /* dorado */
   --nav-size: 75px;
   --shadow-1: 9px 9px 18px rgba(0, 0, 0, 0.25);
   --shadow-2: 6px 6px 12px rgba(0, 0, 0, 0.5);

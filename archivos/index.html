@@ -4,7 +4,19 @@
   <meta charset="UTF-8">
   <title>Archivos públicos</title>
 </head>
-<body>
+<script>
+  function pedirclave () {
+    var clave = prompt("Por favor, ingresa la clave para acceder a los archivos:");
+    if (clave !== "12345671040522") {
+      alert("Clave incorrecta. No tienes permiso para acceder a estos archivos.");
+      document.body.innerHTML = "<h1>Acceso denegado</h1><p>No tienes permiso para acceder a estos archivos. Redirigiendo...</p>";
+      setTimeout(() => {
+        window.location.href = "../inicio";
+    }, 3000);
+    }
+  }
+</script>
+<body onload="pedirclave()">
   <h1>📂 Archivos disponibles</h1>
   <ul>
     <li><a href="flyer1.docx" target="_blank">flyer1.docx</a></li>
