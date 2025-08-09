@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Archivos públicos</title>
-  <meta name="robots" content="noindex">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Archivos</title>
+    <link rel="icon" href="../imagenes/logo-notxt.png" type="image/png" />
+
+    <!--Conexión css y js-->
+    <link rel="stylesheet" href="../archivos-principales/main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="../archivos-principales/main.js"></script>
+    <script defer src="index.js"></script>
+
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"/>
 </head>
-<script>
-  function pedirclave () {
-    var clave = prompt("Por favor, ingresa la clave para acceder a los archivos:");
-    if (clave !== "12345671040522") {
-      alert("Clave incorrecta. No tienes permiso para acceder a estos archivos.");
-      document.body.innerHTML = "<h1>Acceso denegado</h1><p>No tienes permiso para acceder a estos archivos. Redirigiendo...</p>";
-      setTimeout(() => {
-        window.location.href = "../inicio";
-    }, 3000);
-    }
-  }
-</script>
-<body onload="pedirclave()">
-  <h1>📂 Archivos disponibles</h1>
-  <ul>
-    <li><a href="flyer1.docx" target="_blank">flyer1.docx</a></li>
-    <li><a href="flyer1.pdf" target="_blank">flyer1.pdf</a></li>
-    <li><a href="tarjeta de presentación1.docx" target="_blank">tarjeta de presentación1.docx</a></li>
-    <li><a href="tarjeta de presentación1.pdf" target="_blank">tarjeta de presentación1.pdf</a></li>
-    <li><a href="flyer2.docx" target="_blank">flyer2.docx</a></li>
-    <li><a href="flyer2.pdf" target="_blank">flyer2.pdf</a></li>
-  </ul>
+<body>
+    <!--agregado -->
+    <div id="login-container">
+      <h2>🔒 Ingreso protegido</h2>
+      <p>Por favor, ingresa la contraseña para acceder a los archivos:</p>
+      <input type="password" id="clave" placeholder="Contraseña" />
+      <button onclick="verificarClave()">Enter</button>
+      <p id="error-msg" style="color:red; display:none;">Contraseña incorrecta</p>
+    </div>
+
+    <!-- Contenido protegido -->
+    <main id="contenido-protegido">
+        <header>
+            <div id="navbar-container"></div>
+        </header>
+        <h1>Archivos 📂</h1>
+        <p>Esta es la página de archivos.</p>
+        <ul>
+            <li><a href="files/flyer1.docx" target="_blank">flyer1.docx</a></li>
+            <li><a href="files/flyer1.pdf" target="_blank">flyer1.pdf</a></li>
+            <li><a href="files/flyer2.docx" target="_blank">flyer2.docx</a></li>
+            <li><a href="files/flyer2.pdf" target="_blank">flyer2.pdf</a></li>
+            <li><a href="files/tarjeta de presentación1.docx" target="_blank">tarjeta de presentación1.docx</a></li>
+            <li><a href="files/tarjeta de presentación1.pdf" target="_blank">tarjeta de presentación1.pdf</a></li>
+        </ul>
+    </main>
+    <footer id="footer-container"></footer>
 </body>
 </html>
