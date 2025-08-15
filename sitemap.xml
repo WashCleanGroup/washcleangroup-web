@@ -29,4 +29,25 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <url>
+    <loc>https://www.washcleangroup.cl/servicios/gasfiteria/</loc>
+    <lastmod>2025-08-07T23:00:00+00:00</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.washcleangroup.cl/servicios/pintura/</loc>
+    <lastmod>2025-08-07T23:00:00+00:00</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.washcleangroup.cl/servicios/terminaciones/</loc>
+    <lastmod>2025-08-07T23:00:00+00:00</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>
