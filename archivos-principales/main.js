@@ -1,5 +1,5 @@
 // navbar
-fetch("../archivos-principales/navbar.html")
+fetch("../../../archivos-principales/navbar.html")
 .then(res => res.text())
 .then(data => {
     document.getElementById("navbar-container").innerHTML = data;
@@ -27,7 +27,7 @@ document.addEventListener("scroll", function(e) {
     }
 });
 // footer
-fetch("../archivos-principales/footer.html")
+fetch("../../../archivos-principales/footer.html")
 .then(res => res.text())
 .then(data => {
     document.getElementById("footer-container").innerHTML = data;
